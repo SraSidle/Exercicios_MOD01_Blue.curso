@@ -1,0 +1,54 @@
+//Neste problema, deve-se ler o nome de uma peça que chamaremos de peça1, o número de peças1 que o usuário 
+//quer, o valor unitário de cada peça1, o nome de uma peça2, o número de peças2 e o valor unitário de cada
+//peça2. Após, calcule e mostre o valor a ser pago. 
+
+   console.clear();     
+  const prompt = require('prompt-sync')();
+
+  let oferecer = prompt('Olá, bem-vindo(a). Deseja comprar alguma coisa? Digite "sim"  para continuar ').toLowerCase();
+      if (oferecer != 'sim') {
+
+    console.log('No momento, fazemos apenas operações de compra! ');
+  }   else {
+
+  let aviso = prompt('Só poderão ser feitas duas compras por vez ');
+
+    console.clear();
+
+  let pecas = ['cóg- 0 / Calça', 'cóg- 1 / Blusa', 'cóg- 2 / Casaco', 'cóg- 3 / Vestido', 'cóg- 4 / Botas', 'cóg- 5 / Salto Alto'];
+  let precos = [100, 35, 70, 60, 120, 110];
+
+    console.log('Esses são nossos produtos disponíveis: ', pecas);
+
+  let escolha = prompt('Digite o cóg da peça desejada. ');
+  let quantidade1 = +prompt(`Digite quantas peças do tipo: "${pecas[escolha]}" deseja. `);
+
+  let Unitario1 = prompt(`O preço unitário dessa peça é: R$ ${precos[escolha]} reais.`);
+  let compra1 = (precos[escolha] * quantidade1);
+
+    console.log(`A sua primeira compra está no valor de:R$ ${compra1} reais`);
+    console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+    console.log();
+
+  let limpar = prompt('Aperte ENTER para a próxima compra. ');
+    console.clear();
+
+    console.log('Esses são nossos produtos disponíveis para sua segunda compra: ', pecas);
+
+  let escolha2 = prompt('Digite o cóg da segunda peça desejada. ');
+  let quantidade2 = +prompt(`Digite quantas peças do tipo: "${pecas[escolha2]}" deseja. `);
+
+  let precoU2 = prompt(`O preço unitário dessa peça é: R$ ${precos[escolha2]} reais.`);
+  let compra2 = (precos[escolha2] * quantidade2);
+
+    console.log(`A sua segunda compra, está no valor de: ${compra2}`);
+    console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+    console.log();
+
+     limpar = prompt('Aperte ENTER para vizualizar o valor total da compra. ');
+    console.clear();
+
+  let valorTotal = (`O valor total da sua compra é:R$ ${compra1 + compra2} reais`);
+    console.log(` ${valorTotal} `);
+  }
+
