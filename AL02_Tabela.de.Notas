@@ -1,0 +1,28 @@
+      console.clear();
+ const prompt = require('prompt-sync')();
+
+  let aluno1 = prompt('Digite o nome do(a) aluno(a) 1. '); //comando para adicionar o nome e nota do Aluno para posteriormente mostrar na tabela
+  let nota1  = prompt(`Adicione a nota de ${aluno1}. `);
+      console.clear();
+
+  let aluno2 = prompt('Digite o nome do(a) aluno(a) 2. ');
+  let nota2  = +prompt(`Adicione a nota de ${aluno2}. `);
+      console.clear();
+
+  let aluno3 = prompt('Digite o nome do(a) aluno(a) 3. ');
+  let nota3  = prompt(`Adicione a nota de ${aluno3}. `);
+      console.clear();
+
+  let aluno4 = prompt('Digite o nome do(a) aluno(a) 4. ');
+  let nota4  = prompt(`Adicione a nota de ${aluno3}. `);
+      console.clear();
+
+      console.log( `
+
+Aluno(a)          |      Nota
+${aluno1}         |     ${nota1}
+${aluno2}         |     ${nota2}
+${aluno3}         |     ${nota3}
+${aluno4}         |     ${nota4}
+
+`)  //META: Descobrir como fazer um ficar embaxo do outro no terminal certinho.
