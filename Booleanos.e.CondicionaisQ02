@@ -1,0 +1,26 @@
+//Faça um programa para a leitura de quatro notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar:
+//A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+//A mensagem "Em recuperação", se a média for entre cinco e sete;
+//A mensagem "Reprovado", se a média for menor que cinco.
+
+    console.clear();
+ const prompt = require ('prompt-sync')();
+
+ let aluno = prompt('Digite o nome do aluno. ');
+       console.clear();
+
+ let nota1 = +prompt(`Digite a nota 1 de "${aluno}". `);
+ let nota2 = +prompt(`Digite a nota 2 de "${aluno}". `);
+ let nota3 = +prompt(`Digite a nota 3 de "${aluno}". `);
+ let nota4 = +prompt(`Digite a nota 4 de "${aluno}". `);
+      console.clear();
+
+ let media = ((nota1 + nota2 + nota3 + nota4) / 4);
+
+           if (media >= 7) {
+        console.log(`A nota média de "${aluno}" foi: ${media} | Aluno(a) APROVADO(A)!`)
+    } else if (media < 5 ) {
+        console.log(`A nota média de "${aluno}" foi: ${media} | Aluno(a) REPROVADO(A)!`)
+    } else {  (media < 7) 
+        console.log(`A nota média de "${aluno}" foi: ${media} | Aluno(a) de RECUPERAÇÃO!`)
+    }
