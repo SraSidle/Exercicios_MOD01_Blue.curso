@@ -1,0 +1,18 @@
+//Faça um programa que leia 2 valores inteiros (A e B). Após, o programa deve mostrar uma mensagem "Sao Multiplos" ou , 
+//"Nao sao Multiplos", indicando se os valores lidos são múltiplos entre si.
+
+     console.clear();
+  const prompt = require ('Prompt-sync')();
+
+ let valorA = +prompt('Adicione um valor numérico ');
+ let valorB = +prompt('Adicione outro valor numérico ');
+
+ let maiorA = valorA % valorB ; //calcular a divisão do número maior pelo menor. /Se for = 0. São múltiplos entre si
+ let maiorB = valorB % valorA ; // variáveis para calcular as duas possibilidades valorA ser maior ou valorB ser maior
+
+
+      if ((maiorA == 0 || maiorB == 0)) {
+     console.log(`Os números ${valorA} e ${valorB} são múltiplos entre si. `)
+ } else { 
+     console.log(`Os números ${valorA} e ${valorB} não são múltiplos entre si. `)
+ }
